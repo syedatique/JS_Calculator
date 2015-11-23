@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Java Calc-U-L8r</title>
+</head>
+<body>
+
+  <form>
+    <input type="number" placeholder="Enter a number" id="first_number">
+    <select id="operation">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">/</option>
+      <option value="/">*</option>
+    </select>
+    <input type="number" placeholder="Enter a number" id="second_number">
+    <button id="event_click">Calculate!</button>
+  </form>
+
+  <script type="text/javascript">
+
+    document.getElementById("event_click").addEventListener("click", function() {
+      var first = document.getElementById("first_number").value;
+      var second = document.getElementById('second_number').value;
+      var operand= document.getElementById("operation").value;
+      var result = [];
+
+    switch (operand) {
+      case "+":
+      result = (parseInt(first) + parseInt(second));
+      // document.getElementById("resultDiv").innerHTML = "The answer is: " + result;
+      alert("The answer is " + (parseInt(first) + parseInt(second)));
+        break;
+        case "-":
+        alert("The answer is " + (parseInt(first) - parseInt(second)));
+    // result = (parseInt(first) - parseInt(second));
+        break;
+        case "*":
+        alert("The answer is " + (parseInt(first) / parseInt(second)));
+    // result = (parseInt(first) * parseInt(second));
+        break;
+        case "/":
+        alert("The answer is " + (parseInt(first) * parseInt(second)));
+    // result = (parseInt(first) / parseInt(second));
+        break;
+      } 
+});
+
+  </script>
+
+<!-- <div id="resultDiv"></div> -->
+</body>
+</html>
